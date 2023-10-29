@@ -1,0 +1,246 @@
+@font-face {
+    font-family: 'Roboto';
+    src: url(../Fonts/Roboto-Light.ttf);
+}
+
+:root {
+    --timberwolf: rgba(230, 225, 219, 1);
+    --wisteria: rgba(190, 167, 229, 1);
+    --lime: rgba(198, 249, 31, 1);
+    --davys-gray: rgba(78, 81, 102, 1);
+    --gunmetal: rgba(41, 50, 65, 1);
+}
+
+* {
+    font-family: 'Roboto';
+    color: var(--timberwolf);
+}
+
+body {
+    margin: 0;
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 80%;
+    background-color: var(--timberwolf);
+    background-image: url(../images/paperBackground.png);
+    background-size: cover;
+}
+
+#formElement,
+#projectFormElement {
+    position: fixed;
+    background-color: var(--gunmetal);
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    border-radius: 40px;
+    box-shadow: 2px 2px 4px #000000;
+}
+
+.detailsCard {
+    position: fixed;
+    background-color: var(--gunmetal);
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 2px 2px 4px #000000;
+}
+
+#formElement label,
+#projectFormElement label {
+    padding-left: 14px;
+    font-weight: bold;
+}
+
+#formElement #addButton,
+#formElement #editButton {
+    margin-left: 15%;
+    margin-right: 10px;
+}
+
+
+#projectFormElement #addButton {
+    margin-left: 25%;
+    margin-right: 10px;
+}
+
+#formElement #editButton {
+    margin-left: 20%;
+    margin-right: 10px;
+}
+
+#formElement button,
+#projectFormElement button,
+.detailsCard button {
+    background-color: var(--wisteria);
+    border-radius: 20px;
+    padding: 8px 15px;
+    color: var(--gunmetal);
+    font-weight: bold;
+    font-size: medium;
+    border-color: var(--timberwolf);
+    margin-top: 10px;
+}
+
+#formElement .task,
+#formElement .details,
+#formElement .dueDate,
+#formElement .priorityLevel,
+#formElement .project {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    gap: 8px;
+    padding-bottom: 10px;
+}
+
+#formBackground {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(190, 167, 229, 0.848);
+}
+
+input {
+    font: 1em sans-serif;
+    width: 250px;
+    height: 30px;
+    box-sizing: border-box;
+    border: 1px solid #999;
+    border-radius: 20px;
+    padding: 0px 15px;
+}
+
+h1 {
+    margin: 0;
+}
+
+li {
+    list-style: none;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+    margin-top: 20px;
+    border-radius: 30px;
+    padding: 20px;
+    background-color: var(--davys-gray);
+}
+
+.header {
+    background-color: var(--davys-gray);
+    grid-column: 1/3;
+    border-style: solid;
+    border-color: var(--wisteria);
+    padding: 10px;
+}
+
+.sidebar {
+    background-color: var(--davys-gray);
+    border-style: solid;
+    border-top: none;
+    border-color: var(--wisteria);
+    padding: 0;
+    display: grid;
+    justify-content: center;
+    justify-items: center;
+}
+
+.sidebar p {
+    margin: 10px 0px;
+}
+
+.sidebar p:target {
+    background-color: greenyellow;
+}
+
+.sidebar button {
+    background-color: var(--wisteria);
+    border-color: white;
+    border-radius: 30px;
+    height: 40px;
+    width: 40px;
+    margin: 10px 0px;
+}
+
+#main {
+    background-color: var(--davys-gray);
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 80%;
+    gap: 10px;
+    padding: 20px;
+    border-style: solid;
+    border-top: none;
+    border-left: none;
+    border-color: var(--wisteria);
+}
+
+#main button {
+    background-color: var(--wisteria);
+    border-radius: 20px;
+    padding: 8px 15px;
+    color: var(--gunmetal);
+    font-weight: bold;
+    font-size: medium;
+    border-color: var(--timberwolf);
+    margin-top: 10px;
+}
+
+.card {
+    background-color: white;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    grid-template-columns: 20px 1fr 65px 40px 40px 40px;
+    align-items: center;
+    padding-left: 15px;
+    border-radius: 20px;
+    
+}
+
+.card img {
+    width: auto;
+    height: 20px;
+}
+
+.card .details {
+    padding: 5px;
+    background-color: var(--lime);
+}
+
+.card .checkBox,
+.card .checkBoxTicked,
+.card .task,
+.card .details,
+.card .dueDate {
+    color: var(--davys-gray);
+}
+
+.checkBox {
+    border-style: solid;
+    width: 10px;
+    height: 10px;
+}
+
+.checkBoxTicked {
+    border-style: solid;
+    width: 10px;
+    height: 10px;
+    background-color: green;
+}
+
+.edit {
+    width: 20px;
+    height: 20px;
+}
+
+.card .details {
+    border-radius: 10px;
+    text-align: center;
+}
