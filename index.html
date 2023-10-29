@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TodoList</title>
+    
+</head>
+<body>
+    <script src="main.js" defer></script>
+
+    <div class="container">
+        <div class="header">
+            <h1>To Do</h1>
+        </div>
+        <div class="sidebar">
+        </div>
+        <div id="main">
+        </div>
+    </div>
+    <div id="formBackground" style="display: none;">
+        <form id="formElement" style="display: none" action="">
+            <div class="task">
+                <label for="toDoTask">Task</label>
+                    <input id="toDoTask" type="text" placeholder="Feed Goldfish">
+            </div>
+            <div class="details">
+                <label for="toDoDetails">Details</label>
+                    <input id="toDoDetails" type="text" placeholder="Use fish food">
+            </div>
+            <div class="dueDate">
+                <label for="toDoDueDate">Date Due</label>
+                    <input id="toDoDueDate" type="date">
+            </div>
+            <div class="priorityLevel">
+                <label for="toDoPriority">Priority Level</label>
+                    <input id="toDoPriority" type="radio">
+            </div> 
+        </form>
+        <form id="projectFormElement" style="display: none" action="">
+            <div class="project">
+                <label for="toDoProject">Project</label>
+                    <input id="toDoProject" type="text" placeholder="Work">
+            </div>
+        </form>
+    </div>
+    <div id="displayDetails"></div>
+</body>
+</html>
